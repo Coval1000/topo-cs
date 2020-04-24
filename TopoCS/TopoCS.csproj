@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8B368B2B-5262-4C88-B071-E9A2D68D5CCE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TopoCS</RootNamespace>
+    <AssemblyName>TopoCS</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.DirectX, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Windows\Microsoft.NET\DirectX for Managed Code\1.0.2902.0\Microsoft.DirectX.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.DirectX.Diagnostics, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Windows\Microsoft.NET\DirectX for Managed Code\1.0.2902.0\Microsoft.DirectX.Diagnostics.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.DirectX.Direct3D, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Windows\Microsoft.NET\DirectX for Managed Code\1.0.2902.0\Microsoft.DirectX.Direct3D.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.DirectX.Direct3DX, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Windows\Microsoft.NET\DirectX for Managed Code\1.0.2902.0\Microsoft.DirectX.Direct3DX.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.DirectX.DirectDraw, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Windows\Microsoft.NET\DirectX for Managed Code\1.0.2902.0\Microsoft.DirectX.DirectDraw.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpDX.4.2.0\lib\net45\SharpDX.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.D3DCompiler, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpDX.D3DCompiler.4.2.0\lib\net45\SharpDX.D3DCompiler.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.Desktop, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpDX.Desktop.4.2.0\lib\net45\SharpDX.Desktop.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.Direct2D1, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpDX.Direct2D1.4.2.0\lib\net45\SharpDX.Direct2D1.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.Direct3D10, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpDX.Direct3D10.4.2.0\lib\net45\SharpDX.Direct3D10.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.Direct3D11, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpDX.Direct3D11.4.2.0\lib\net45\SharpDX.Direct3D11.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.Direct3D11.Effects, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpDX.Direct3D11.Effects.4.2.0\lib\net45\SharpDX.Direct3D11.Effects.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.Direct3D9, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpDX.Direct3D9.4.2.0\lib\net45\SharpDX.Direct3D9.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.DirectInput, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpDX.DirectInput.4.2.0\lib\net45\SharpDX.DirectInput.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.DXGI, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpDX.DXGI.4.2.0\lib\net45\SharpDX.DXGI.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.Mathematics, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpDX.Mathematics.4.2.0\lib\net45\SharpDX.Mathematics.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.RawInput, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpDX.RawInput.4.2.0\lib\net45\SharpDX.RawInput.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.XInput, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpDX.XInput.4.2.0\lib\net45\SharpDX.XInput.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.cs" />
+    <Compile Include="Render\AxisRosette.cs" />
+    <Compile Include="Render\Axle.cs" />
+    <Compile Include="Render\Button.cs" />
+    <Compile Include="Camera.cs" />
+    <Compile Include="Render\Graph.cs" />
+    <Compile Include="Render\Shaders\ColorShader.cs" />
+    <Compile Include="D3DX.cs" />
+    <Compile Include="Render\Font.cs" />
+    <Compile Include="Render\Shaders\FontShader.cs" />
+    <Compile Include="Input.cs" />
+    <Compile Include="Render\Shaders\MonocolorShader.cs" />
+    <Compile Include="Render\Plain.cs" />
+    <Compile Include="Position.cs" />
+    <Compile Include="RenderTexture.cs" />
+    <Compile Include="Render\Shaders\PlotShader.cs" />
+    <Compile Include="Render\Shapes\Rectangle.cs" />
+    <Compile Include="Render\Shapes\Shape.cs" />
+    <Compile Include="Render\Shapes\Triangle.cs" />
+    <Compile Include="Render\Terrain.cs" />
+    <Compile Include="Render\Text.cs" />
+    <Compile Include="Render\Texture.cs" />
+    <Compile Include="Timer.cs" />
+    <Compile Include="tut\DCameraClass1.cs" />
+    <Compile Include="tut\DColorShaderClass1.cs" />
+    <Compile Include="tut\DDX11Class2.cs" />
+    <Compile Include="tut\DGraphicsClass3.cs" />
+    <Compile Include="tut\DInputClass1.cs" />
+    <Compile Include="tut\DModelClass1.cs" />
+    <Compile Include="tut\DPerfLoggerClass1.cs" />
+    <Compile Include="tut\DSystemClass2.cs" />
+    <Compile Include="tut\DSystemConfigurationClass3.cs" />
+    <Compile Include="tut\DTimerClass1.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tut\PerfTestResultForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tut\PerfTestResultForm.Designer.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Render\VectorLine.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tut\PerfTestResultForm.resx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Render\Shaders\color.ps" />
+    <None Include="Render\Shaders\color.vs" />
+    <None Include="Render\Shaders\monocolor.ps" />
+    <None Include="Render\Shaders\monocolor.vs" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Render\Shaders\plot.ps" />
+    <None Include="Render\Shaders\plot.vs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="legacy cpp\finished\applicationclass.cpp" />
+    <Content Include="legacy cpp\finished\applicationclass.h" />
+    <Content Include="legacy cpp\finished\axisrosette.cpp" />
+    <Content Include="legacy cpp\finished\axisrosette.h" />
+    <Content Include="legacy cpp\finished\axle.cpp" />
+    <Content Include="legacy cpp\finished\axle.h" />
+    <Content Include="legacy cpp\bitmapclass.cpp" />
+    <Content Include="legacy cpp\bitmapclass.h" />
+    <Content Include="legacy cpp\unused\bumpmapshaderclass.cpp" />
+    <Content Include="legacy cpp\unused\bumpmapshaderclass.h" />
+    <Content Include="legacy cpp\finished\button.cpp" />
+    <Content Include="legacy cpp\finished\button.h" />
+    <Content Include="legacy cpp\finished\cameraclass.cpp" />
+    <Content Include="legacy cpp\finished\cameraclass.h" />
+    <Content Include="legacy cpp\finished\colorshaderclass.cpp" />
+    <Content Include="legacy cpp\finished\colorshaderclass.h" />
+    <Content Include="legacy cpp\cpuclass.cpp" />
+    <Content Include="legacy cpp\cpuclass.h" />
+    <Content Include="legacy cpp\finished\D3dclass.cpp" />
+    <Content Include="legacy cpp\finished\D3dclass.h" />
+    <Content Include="legacy cpp\DebugWindowClass.cpp" />
+    <Content Include="legacy cpp\DebugWindowClass.h" />
+    <Content Include="legacy cpp\finished\fontclass.cpp" />
+    <Content Include="legacy cpp\finished\fontclass.h" />
+    <Content Include="legacy cpp\finished\fontshaderclass.cpp" />
+    <Content Include="legacy cpp\finished\fontshaderclass.h" />
+    <Content Include="legacy cpp\fpsclass.cpp" />
+    <Content Include="legacy cpp\fpsclass.h" />
+    <Content Include="legacy cpp\unused\frustumclass.cpp" />
+    <Content Include="legacy cpp\unused\frustumclass.h" />
+    <Content Include="legacy cpp\graphicsclass.cpp" />
+    <Content Include="legacy cpp\graphicsclass.h" />
+    <Content Include="legacy cpp\finished\inputclass.cpp" />
+    <Content Include="legacy cpp\finished\inputclass.h" />
+    <Content Include="legacy cpp\main.cpp" />
+    <Content Include="legacy cpp\unused\modelclass.cpp" />
+    <Content Include="legacy cpp\unused\modelclass.h" />
+    <Content Include="legacy cpp\unused\modellistclass.cpp" />
+    <Content Include="legacy cpp\unused\modellistclass.h" />
+    <Content Include="legacy cpp\finished\monocolorshader.cpp" />
+    <Content Include="legacy cpp\finished\monocolorshader.h" />
+    <Content Include="legacy cpp\unused\multitextureshaderclass.cpp" />
+    <Content Include="legacy cpp\unused\multitextureshaderclass.h" />
+    <Content Include="legacy cpp\finished\Plain.cpp" />
+    <Content Include="legacy cpp\finished\Plain.h" />
+    <Content Include="legacy cpp\finished\positionclass.cpp" />
+    <Content Include="legacy cpp\finished\positionclass.h" />
+    <Content Include="legacy cpp\finished\RectangleClass.cpp" />
+    <Content Include="legacy cpp\finished\RectangleClass.h" />
+    <Content Include="legacy cpp\RenderBitmapClass.cpp" />
+    <Content Include="legacy cpp\RenderBitmapClass.h" />
+    <Content Include="legacy cpp\RenderTextureClass.cpp" />
+    <Content Include="legacy cpp\RenderTextureClass.h" />
+    <Content Include="legacy cpp\shader-error.txt" />
+    <Content Include="legacy cpp\finished\ShapeClass.cpp" />
+    <Content Include="legacy cpp\finished\ShapeClass.h" />
+    <Content Include="legacy cpp\Systemclass.cpp" />
+    <Content Include="legacy cpp\Systemclass.h" />
+    <Content Include="legacy cpp\finished\terrainclass.cpp" />
+    <Content Include="legacy cpp\finished\terrainclass.h" />
+    <Content Include="legacy cpp\finished\textclass.cpp" />
+    <Content Include="legacy cpp\finished\textclass.h" />
+    <Content Include="legacy cpp\unused\texturearrayclass.cpp" />
+    <Content Include="legacy cpp\unused\texturearrayclass.h" />
+    <Content Include="legacy cpp\finished\textureclass.cpp" />
+    <Content Include="legacy cpp\finished\textureclass.h" />
+    <Content Include="legacy cpp\textureshaderclass.cpp" />
+    <Content Include="legacy cpp\textureshaderclass.h" />
+    <Content Include="legacy cpp\timerclass.cpp" />
+    <Content Include="legacy cpp\timerclass.h" />
+    <Content Include="legacy cpp\finished\TriangleClass.cpp" />
+    <Content Include="legacy cpp\finished\TriangleClass.h" />
+    <Content Include="legacy cpp\finished\VectorLineClass.cpp" />
+    <Content Include="legacy cpp\finished\VectorLineClass.h" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
